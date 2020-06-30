@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  # docker run -it --rm -p 27017:27017 --name mongodb -v ~/projects/local_mongo/data/db:/data/db mongo
+  db:
+    image: mongo:4.2.8
+    container_name: db
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    ports:
+      - 27017:27017
+    command: mongod
+  
+volumes:
+  mongodb:
+  mongodb_config:
+

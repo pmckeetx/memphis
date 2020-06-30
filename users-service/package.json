@@ -1,0 +1,18 @@
+{
+  "name": "users-service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "ronin-auth": "^0.1.1",
+    "ronin-database": "^0.1.1",
+    "ronin-errors": "^0.1.1",
+    "ronin-rbac": "^0.1.1",
+    "ronin-server": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

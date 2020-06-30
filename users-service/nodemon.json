@@ -1,0 +1,8 @@
+{
+	"env": {
+		"SERVER_PORT": "8080",
+		"DATABASE_CONNECTIONSTRING": "mongodb://localhost:27017/yoda_users",
+		"SESSION_SECRET": "qsdlka^sbasf7q2&radsfanv(ak923#4234asdfvaad*98)8asd!f2r$vas100as",
+		"RBAC_USERS_COLLECTION": "users"
+	}
+}

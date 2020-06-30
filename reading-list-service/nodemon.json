@@ -1,0 +1,7 @@
+{
+	"env": {
+		"SERVER_PORT": "8082",
+		"DATABASE_CONNECTIONSTRING": "mongodb://localhost:27017/yoda_reading-list",
+		"SESSION_SECRET": "qsdlka^sbasf7q2&radsfanv(ak923#4234asdfvaad*98)8asd!f2r$vas100as"
+	}
+}
