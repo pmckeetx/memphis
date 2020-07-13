@@ -1,6 +1,5 @@
 const ronin 		= require( 'ronin-server' )
 const config    = require( './config' )
-const routes    = require( './routes' )
 
 async function main() {
 	const server = ronin.server({
@@ -8,7 +7,7 @@ async function main() {
   })
 
 	try {
-    
+
     server.get( '/', (req, res) => {
       res.send( '<h1>Notes Service</h1>' )
     })
