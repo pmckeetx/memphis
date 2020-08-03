@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  notes:
+    build:
+      context: .
+    ports: 
+      - 8081:8081
+    environment: 
+      - SERVER_PORT=8081

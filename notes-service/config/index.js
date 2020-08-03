@@ -5,7 +5,8 @@ module.exports = {
 	database: {
 		connectionstring: process.env.DATABASE_CONNECTIONSTRING
 	},
-	session: {
-		secret: process.env.SESSION_SECRET
+	rbac: {
+		secret: process.env.SESSION_SECRET,
+		usersCollection: process.env.RBAC_USERS_COLLECTION
 	}
 }

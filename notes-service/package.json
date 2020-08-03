@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "s": "DATABASE_CONNECTIONSTRING=mongodb://localhost:27017/yoda_notes SERVER_PORT=8081 node server.js"
   },
   "dependencies": {
+    "ronin-auth": "^0.1.1",
+    "ronin-database": "^0.1.1",
+    "ronin-errors": "^0.1.1",
+    "ronin-mocks": "^0.1.1",
+    "ronin-rbac": "^0.1.1",
     "ronin-server": "^0.1.1"
   },
   "devDependencies": {

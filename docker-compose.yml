@@ -1,18 +1,30 @@
 version: '3'
 
 services:
+  notes:
+    build: ./notes-service
+    image: memphisco/notes-service
+    x-aws-pull_credentials: arn:aws:secretsmanager:us-east-1:838733989983:secret:docker-cli-ecs-g6PjUz
+    ports: 
+      - 8081:8081
+    environment: 
+      - SERVER_PORT=8081
+      - DATABASE_CONNECTIONSTRING=mongodb://db:27017/yoda_notes
+    depends_on:
+      - db
+
   # docker run -it --rm -p 27017:27017 --name mongodb -v ~/projects/local_mongo/data/db:/data/db mongo
   db:
-    image: mongo:4.2.8
+    image: mongo:4.2.8a
     container_name: db
-    volumes:
-      - mongodb:/data/db
-      - mongodb_config:/data/configdb
+    # volumes:
+    #   - mongodb:/data/db
+    #   - mongodb_config:/data/configdb
     ports:
       - 27017:27017
     command: mongod
   
-volumes:
-  mongodb:
-  mongodb_config:
+# volumes:
+#   mongodb:
+#   mongodb_config:
 
