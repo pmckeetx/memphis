@@ -1,13 +1,12 @@
-FROM node:latest
+FROM node:12.18.3
 
-WORKDIR /app
+WORKDIR /code
 
-COPY package.json /app
-COPY package-lock.json /app
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+
 RUN npm install
 
-COPY . /app
+COPY . .
 
-CMD ["node", "server"]
-
-
+CMD [ "node", "server.js" ]
