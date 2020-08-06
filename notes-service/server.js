@@ -15,15 +15,26 @@ async function main() {
 			port: config.server.port
 		})
 
-		server.use( '/services/m/', mocks.server( server.Router()) )
+		server.use( '/services/m', mocks.server( server.Router()) )
+		server.use( '/foo', (req, res) => {
+			return res.json({ "foo": "bar" })
+		})
 
     const result = await server.start()
-    console.info( result )
+		console.info( result )
 
 	} catch( error ) {
 		console.error( error )
 	}
 
 }
+
+function shutdown( signal ) {
+	console.info( `[${signal}] shutting down...` )
+	process.exit()
+}
+
+process.on( 'SIGINT', () => shutdown( 'SIGINT' ) )
+process.on( 'SIGTERM', () => shutdown( 'SIGTERM' ) )
 
 main()

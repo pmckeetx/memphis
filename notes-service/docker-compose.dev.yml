@@ -25,23 +25,3 @@ services:
 volumes:
   mongodb:
   mongodb_config:
-    
-    
-# version: '3.7'
-
-# services:
-#   notes:
-#     build:
-#       context: .
-#     ports: 
-#       - 8080:8080
-#     environment: 
-#       - SERVER_PORT=8080
-#       - DATABASE_CONNECTIONSTRING="mongodb://mongodb:27017/yoda_notes"
-#     networks: 
-#       - mongodb
-
-# networks: 
-#   mongodb:
-#     external: 
-#       name: mongodb
